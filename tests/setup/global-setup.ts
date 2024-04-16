@@ -3,7 +3,8 @@ import LoginPage from '../ui/pages/login-page';
 import uiPages from '../utils/uiPages';
 
 async function globalSetup(config: FullConfig) {
-  const user = process.env.USERNAME!;
+  // const user = process.env.USERNAME!;
+  const user = process.env.USERNAME_TESTUSER!;
   const password = process.env.PASSWORD!;
   const { baseURL, storageState } = config.projects[0].use;
   const browser = await chromium.launch({ headless: true, timeout: 10000 });
